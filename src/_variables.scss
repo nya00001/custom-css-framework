@@ -1,0 +1,69 @@
+// Variables
+$pi: 3.14159265359;
+
+// Theme colors
+$primary-color: #0A0C1F;
+$secondary-color: #FFFFFF;
+$error-color: #d32752;
+$info-color: #f6c31c;
+$light-color: #B4CDED;
+$dark-color: #344966;
+$tertiary-color: #6C45E2;
+$green: #19e635;
+
+// Color palette
+$colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "error": $error-color,
+  "info": $info-color,
+  "light": $light-color,
+  "dark": $dark-color,
+  "tertiary": $tertiary-color,
+  "green": $green,
+  "blue": #1919e6,
+  "red": #e61919,
+  "yellow": #e6e619,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "gray": #808080,
+  "black": black,
+  "white": white,
+);
+
+// Spacing
+$padding-lg: 2rem;
+$padding-md: 1rem;
+$padding-sm: 0.5rem;
+$base-padding: 0.75rem;
+
+$margin-lg: 2rem;
+$margin-md: 1rem;
+$margin-sm: 0.5rem;
+$base-margin: 0.75rem;
+
+// Borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+// Box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
+// Typography
+$primary-font: 'Roboto Mono', monospace;
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.75;
+$font-size-md: $font-size-base * 1;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-xl: $font-size-base * 2;
+$font-size-xxl: $font-size-base * 3;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// List styles
+$list-style-disc: disc;
+$list-style-alpha-upper: upper-alpha;
+$list-style-roman: lower-roman;
