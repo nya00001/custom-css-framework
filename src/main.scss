@@ -1,0 +1,109 @@
+@use 'sass:math';
+@use 'variables' as vars;
+@use 'reset';
+
+body {
+  background-color: vars.$primary-color;
+  color: vars.$secondary-color;
+  font-family: vars.$primary-font;
+  font-size: vars.$font-size-base;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  position: relative; // Ensure the ::after pseudo-element is positioned relative to the h1 element
+  font-size: vars.$font-size-xl;
+  font-weight: vars.$font-weight-bold;
+  color: vars.$secondary-color;
+
+  // Hover effect
+  &:hover {
+    color: vars.$info-color;
+  }
+
+  // Add emoji after the h1 element
+  &::after {
+    content: "😊"; // Unicode character for the emoji
+    right: -20px; // Adjust as needed for positioning
+    font-size: 36px; // Adjust as needed for size
+  }
+}
+
+div#black-box {
+  background-color: vars.$primary-color;
+  color: vars.$secondary-color;
+}
+
+// Define the mixin
+@mixin btn($btn-bg: vars.$info-color, $btn-hover-bg: vars.$dark-color) {
+  background-color: $btn-bg;
+  border-radius: vars.$base-border-radius;
+  color: vars.$secondary-color;
+  padding: vars.$padding-md vars.$padding-lg;
+  margin: vars.$margin-lg;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+
+  // Hover effects
+  &:hover {
+    background-color: $btn-hover-bg;
+    color: vars.$primary-color;
+    padding: vars.$padding-md vars.$padding-lg;
+  }
+}
+
+// Usage example for the button
+.btn {
+  @include btn(vars.$info-color, vars.$dark-color);
+}
+
+.btn-error {
+  @include btn(vars.$error-color, darken(vars.$error-color, 10%));
+}
+
+.btn-success {
+  @include btn(vars.$green, darken(vars.$green, 10%));
+}
+
+%card {
+  background-color: vars.$info-color;
+  border: vars.$base-border-thickness solid vars.$secondary-color;
+  padding: vars.$padding-md;
+  margin: vars.$margin-md;
+  box-shadow: vars.$base-box-shadow;
+
+  // Nested styles for elements inside the card
+  .card-heading h2 {
+    color: vars.$dark-color;
+  }
+
+  .para p {
+    color: vars.$secondary-color;
+  }
+}
+
+%card-new {
+  background-color: vars.$dark-color;
+  border: vars.$base-border-thickness solid vars.$error-color;
+  padding: vars.$padding-lg;
+  margin: vars.$margin-lg;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  // Nested styles for elements inside the new card
+  .card-heading h2 {
+    color: vars.$green;
+  }
+
+  .para p {
+    color: vars.$primary-color;
+  }
+}
+
+// Apply the %card-new placeholder to another element
+.card {
+  @extend %card-new;
+}
