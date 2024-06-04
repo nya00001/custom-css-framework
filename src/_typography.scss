@@ -1,0 +1,79 @@
+@use '../variables' as vars;
+
+body {
+  font-family: vars.$primary-font;
+}
+
+h1 {
+  position: relative; // Ensure the ::after pseudo-element is positioned relative to the h1 element
+  font-size: vars.$font-size-xxl;
+  font-weight: vars.$font-weight-bold;
+  color: vars.$secondary-color;
+
+  // Hover effect
+  &:hover {
+    color: vars.$info-color;
+  }
+
+  // Add emoji after the h1 element
+  &::after {
+    content: "😊"; // Unicode character for the emoji
+    right: -20px; // Adjust as needed for positioning
+    font-size: 36px; // Adjust as needed for size
+  }
+}
+
+h2 {
+  font-size: vars.$font-size-xl;
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$secondary-color;
+
+  // Hover effect
+  &:hover {
+    color: vars.$info-color;
+  }
+}
+
+h3 {
+  font-size: vars.$font-size-lg;
+  font-weight: vars.$font-weight-normal;
+  color: vars.$secondary-color;
+
+  // Hover effect
+  &:hover {
+    color: vars.$info-color;
+  }
+}
+
+h4 {
+  font-size: vars.$font-size-md;
+  font-weight: vars.$font-weight-normal;
+  color: vars.$secondary-color;
+
+  // Hover effect
+  &:hover {
+    color: vars.$info-color;
+  }
+}
+
+h5 {
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-light;
+  color: vars.$secondary-color;
+
+  // Hover effect
+  &:hover {
+    color: vars.$info-color;
+  }
+}
+
+h6 {
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-light;
+  color: vars.$secondary-color;
+
+  // Hover effect
+  &:hover {
+    color: vars.$info-color;
+  }
+}
