@@ -1,0 +1,87 @@
+@use '../variables' as vars;
+
+@mixin button-styles($bg-color, $text-color, $hover-bg-color, $hover-text-color, $border: none, $margin: vars.$margin-sm) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: vars.$padding-sm vars.$padding-md;
+  border-radius: vars.$base-border-radius;
+  border: $border;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: vars.$font-size-md;
+  margin: $margin;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-text-color;
+  }
+
+  &:focus {
+    outline: 2px solid $hover-bg-color;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background-color: darken($hover-bg-color, 10%);
+    color: $hover-text-color;
+  }
+}
+
+.btn {
+  @include button-styles(vars.$secondary-color, vars.$primary-color, darken(vars.$secondary-color, 10%), vars.$primary-color);
+}
+
+.btn-primary {
+  @include button-styles(vars.$primary-color, vars.$secondary-color, darken(vars.$primary-color, 10%), vars.$secondary-color, 2px solid vars.$secondary-color);
+}
+
+.btn-secondary {
+  @include button-styles(vars.$dark-color, vars.$light-color, darken(vars.$dark-color, 10%), vars.$light-color, 2px solid vars.$light-color);
+}
+
+.btn-success {
+  @include button-styles(vars.$green, vars.$secondary-color, darken(vars.$green, 10%), vars.$secondary-color);
+}
+
+.btn-error {
+  @include button-styles(vars.$error-color, vars.$secondary-color, darken(vars.$error-color, 10%), vars.$secondary-color);
+}
+
+.btn-info {
+  @include button-styles(vars.$info-color, vars.$primary-color, darken(vars.$info-color, 10%), vars.$primary-color);
+}
+
+.btn-light {
+  @include button-styles(vars.$light-color, vars.$primary-color, darken(vars.$light-color, 10%), vars.$primary-color);
+}
+
+.btn-dark {
+  @include button-styles(vars.$dark-color, vars.$secondary-color, darken(vars.$dark-color, 10%), vars.$secondary-color);
+}
+
+.btn-tertiary {
+  @include button-styles(vars.$tertiary-color, vars.$secondary-color, darken(vars.$tertiary-color, 10%), vars.$secondary-color);
+}
+
+.btn-green {
+  @include button-styles(vars.$green, vars.$secondary-color, darken(vars.$green, 10%), vars.$secondary-color);
+}
+
+.form-submit {
+  @include button-styles(vars.$light-color, vars.$dark-color, darken(vars.$light-color, 10%), vars.$dark-color);
+}
+
+.btn-disabled {
+  background-color: lighten(vars.$primary-color, 40%);
+  color: lighten(vars.$secondary-color, 40%);
+  cursor: not-allowed;
+  opacity: 0.65;
+  margin: vars.$margin-sm;
+
+  &:hover, &:focus, &:active {
+    background-color: lighten(vars.$primary-color, 40%);
+    color: lighten(vars.$secondary-color, 40%);
+  }
+}
