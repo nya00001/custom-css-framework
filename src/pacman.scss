@@ -1,3 +1,8 @@
-@use 'reset';
-@use 'variables';
-@use 'main';
+@use 'variables' as vars;
+
+@use 'base/base';
+@use 'typography/typography';
+@use 'typography/font-family';
+@use 'layout/layout';
+@use 'components/buttons';
+@use 'components/cards';

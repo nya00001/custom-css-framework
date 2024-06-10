@@ -13,97 +13,140 @@
             <p class="nav-subtitle">A lightweight CSS retro library</p>
         </div>
     </nav>
-    <div class="content">
-        <!-- Headings -->
-        <h1 class="heading-1">Heading 1</h1>
-        <h2 class="heading-2">Heading 2</h2>
-        <h3 class="heading-3">Heading 3</h3>
-        <h4 class="heading-4">Heading 4</h4>
-        <h5 class="heading-5">Heading 5</h5>
-        <h6 class="heading-6">Heading 6</h6>
+    <div class="container">
+        <div class="content">
+            <!-- Headings -->
+            <h1 class="heading-1">Heading 1</h1>
+            <h2 class="heading-2">Heading 2</h2>
+            <h3 class="heading-3">Heading 3</h3>
+            <h4 class="heading-4">Heading 4</h4>
+            <h5 class="heading-5">Heading 5</h5>
 
-        <!-- Paragraph -->
-        <p class="paragraph">This is a sample paragraph demonstrating the base font size and line height. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <!-- Paragraph -->
+            <p class="paragraph">This is a sample paragraph demonstrating the base font size and line height. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <!-- Link -->
-        <a href="#" class="link">This is a sample link</a>
+            <!-- Link -->
+            <a href="#" class="link">This is a sample link</a>
 
-        <!-- Buttons -->
-        <button class="btn">Default Button</button>
-        <button class="btn btn-primary">Primary Button</button>
-        <button class="btn btn-secondary">Secondary Button</button>
+            <!-- Buttons -->
+            <button class="btn">Default Button</button>
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <button class="btn btn-error">Error Button</button>
+            <button class="btn btn-info">Info Button</button>
+            <button class="btn btn-light">Light Button</button>
+            <button class="btn btn-dark">Dark Button</button>
+            <button class="btn btn-tertiary">Tertiary Button</button>
+            <button class="btn btn-green">Green Button</button>
+           
+            <!-- Unordered List -->
+            <ul class="unordered-list">
+                <li class="list-item">List item 1</li>
+                <li class="list-item">List item 2</li>
+                <li class="list-item">List item 3</li>
+            </ul>
 
-        <!-- Unordered List -->
-        <ul class="unordered-list">
-            <li class="list-item">List item 1</li>
-            <li class="list-item">List item 2</li>
-            <li class="list-item">List item 3</li>
-        </ul>
+            <!-- Ordered List -->
+            <ol class="ordered-list">
+                <li class="list-item">List item 1</li>
+                <li class="list-item">List item 2</li>
+                <li class="list-item">List item 3</li>
+            </ol>
 
-        <!-- Ordered List -->
-        <ol class="ordered-list">
-            <li class="list-item">List item 1</li>
-            <li class="list-item">List item 2</li>
-            <li class="list-item">List item 3</li>
-        </ol>
+            <ol class="roman-list">
+                <li class="list-item">List item I</li>
+                <li class="list-item">List item II</li>
+                <li class="list-item">List item III</li>
+            </ol>
 
-        <!-- Card -->
-        <div class="card">
-            <h1 class="card-title">This is a title</h1>
-            <p class="card-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio?</p>
+            <!-- Card -->
+            <div class="card-container">
+                <!-- Default Card -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="card__image">
+                    <h3 class="card__title">Default Card Title</h3>
+                    <p class="card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio?</p>
+                </div>
+
+                <!-- Primary Card -->
+                <div class="card-primary">
+                    <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="card__image">
+                    <h3 class="card__title">Primary Card Title</h3>
+                    <p class="card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio?</p>
+                </div>
+
+                <!-- Success Card -->
+                <div class="card-success">
+                    <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="card__image">
+                    <h3 class="card__title">Success Card Title</h3>
+                    <p class="card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio?</p>
+                </div>
+
+                <!-- Error Card -->
+                <div class="card-error">
+                    <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="card__image">
+                    <h3 class="card__title">Error Card Title</h3>
+                    <p class="card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio?</p>
+                </div>
+
+
+            </div>
+            
+            <!-- Form -->
+            <form class="form">
+                <div class="form-group">
+                    <label for="input-text" class="form-label">Text Input</label>
+                    <input type="text" id="input-text" name="input-text" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="input-password" class="form-label">Password</label>
+                    <input type="password" id="input-password" name="input-password" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="input-dropdown" class="form-label">Options</label>
+                    <select id="input-dropdown" name="input-dropdown" class="form-select">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input-textarea" class="form-label">Textarea</label>
+                    <textarea id="input-textarea" name="input-textarea" class="form-textarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="form-submit">
+                </div>
+            </form>
+
+            <!-- Table -->
+            <table class="table">
+                <thead class="table-head">
+                    <tr class="table-row">
+                        <th class="table-header">Header 1</th>
+                        <th class="table-header">Header 2</th>
+                        <th class="table-header">Header 3</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <tr class="table-row">
+                        <td class="table-cell">Row 1, Cell 1</td>
+                        <td class="table-cell">Row 1, Cell 2</td>
+                        <td class="table-cell">Row 1, Cell 3</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell">Row 2, Cell 1</td>
+                        <td class="table-cell">Row 2, Cell 2</td>
+                        <td class="table-cell">Row 2, Cell 3</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell">Row 3, Cell 1</td>
+                        <td class="table-cell">Row 3, Cell 2</td>
+                        <td class="table-cell">Row 3, Cell 3</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <!-- Form -->
-        <form class="form">
-            <div class="form-group">
-                <label for="input-text" class="form-label">Text Input</label>
-                <input type="text" id="input-text" name="input-text" class="form-input">
-            </div>
-            <div class="form-group">
-                <label for="input-password" class="form-label">Password</label>
-                <input type="password" id="input-password" name="input-password" class="form-input">
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="input-checkbox" name="input-checkbox" class="form-checkbox">
-                <label for="input-checkbox" class="form-label">Checkbox</label>
-            </div>
-            <div class="form-group">
-                <label for="input-textarea" class="form-label">Textarea</label>
-                <textarea id="input-textarea" name="input-textarea" class="form-textarea"></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Submit" class="form-submit">
-            </div>
-        </form>
-
-        <!-- Table -->
-        <table class="table">
-            <thead class="table-head">
-                <tr class="table-row">
-                    <th class="table-header">Header 1</th>
-                    <th class="table-header">Header 2</th>
-                    <th class="table-header">Header 3</th>
-                </tr>
-            </thead>
-            <tbody class="table-body">
-                <tr class="table-row">
-                    <td class="table-cell">Row 1, Cell 1</td>
-                    <td class="table-cell">Row 1, Cell 2</td>
-                    <td class="table-cell">Row 1, Cell 3</td>
-                </tr>
-                <tr class="table-row">
-                    <td class="table-cell">Row 2, Cell 1</td>
-                    <td class="table-cell">Row 2, Cell 2</td>
-                    <td class="table-cell">Row 2, Cell 3</td>
-                </tr>
-                <tr class="table-row">
-                    <td class="table-cell">Row 3, Cell 1</td>
-                    <td class="table-cell">Row 3, Cell 2</td>
-                    <td class="table-cell">Row 3, Cell 3</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </body>
 </html>
-
