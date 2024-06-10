@@ -1,0 +1,29 @@
+@use '../variables' as vars;
+
+body {
+  font-family: vars.$primary-font;
+}
+
+@mixin font-family($font-family) {
+  font-family: $font-family;
+}
+
+.font-primary {
+  @include font-family(vars.$primary-font);
+}
+
+.font-secondary {
+  @include font-family('Arial, sans-serif'); // Example secondary font
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: vars.$primary-font;
+}
+
+.navbar {
+  @include font-family('Helvetica, sans-serif'); // Example for navigation bar
+}
+
+.footer {
+  @include font-family('Courier New, monospace'); // Example for footer
+}
