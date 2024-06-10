@@ -1,0 +1,110 @@
+@use '../variables' as vars;
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: vars.$margin-md;
+    padding: vars.$padding-md;
+
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    
+      @media (min-width: 1200px) {
+        grid-template-columns: repeat(6, 1fr);
+      }
+}
+
+.card {
+    background-color: vars.$secondary-color;
+    color: vars.$primary-color;
+    width: vars.$card-width;
+    height: vars.$card-height;
+    padding: vars.$padding-md;
+    margin: vars.$margin-md;
+    border-radius: vars.$base-border-radius;
+    box-shadow: vars.$base-box-shadow;
+    border: 1px solid vars.$primary-color;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  
+    &__image {
+      width: 100%;
+      height: vars.$card-image-height;
+      object-fit: cover;
+      border-bottom: 1px solid vars.$primary-color;
+    }
+  
+    &__title {
+      font-weight: vars.$font-weight-bold;
+      margin-top: vars.$margin-sm;
+      margin-bottom: vars.$margin-sm;
+      font-size: vars.$font-size-md;
+    }
+  
+    &__content {
+      font-size: vars.$font-size-base;
+      flex-grow: 1;
+    }
+  }
+.card h3 {
+    color: vars.$primary-color;
+}
+
+.card p {
+    color: vars.$primary-color;
+}
+
+.card-primary {
+  @extend .card;
+  background-color: vars.$primary-color;
+  color: vars.$secondary-color;
+  border-color: vars.$secondary-color;
+}
+
+.card-primary h3 {
+    color: vars.$secondary-color;
+}
+
+.card-primary p {
+    color: vars.$secondary-color;
+}
+
+.card-success {
+  @extend .card;
+  background-color: vars.$green;
+  border-color: darken(vars.$green, 10%);
+}
+
+.card-success h3 {
+    color: vars.$secondary-color;
+}
+
+.card-success p {
+    color: vars.$secondary-color;
+}
+
+.card-error {
+  @extend .card;
+  background-color: vars.$error-color;
+  color: vars.$secondary-color;
+  border-color: darken(vars.$error-color, 10%);
+}
+
+.card-error h3 {
+    color: vars.$secondary-color;
+}
+
+.card-error p {
+    color: vars.$secondary-color;
+}
