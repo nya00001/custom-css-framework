@@ -21,14 +21,6 @@ $colors: (
   "dark": $dark-color,
   "tertiary": $tertiary-color,
   "green": $green,
-  "blue": #1919e6,
-  "red": #e61919,
-  "yellow": #e6e619,
-  "orange": #ffa600,
-  "purple": #9900ff,
-  "gray": #808080,
-  "black": black,
-  "white": white,
 );
 
 // Spacing
@@ -58,6 +50,7 @@ $font-size-lg: $font-size-base * 1.5;
 $font-size-xl: $font-size-base * 2;
 $font-size-xxl: $font-size-base * 3;
 
+
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
@@ -67,3 +60,7 @@ $font-weight-bold: 700;
 $list-style-disc: disc;
 $list-style-alpha-upper: upper-alpha;
 $list-style-roman: lower-roman;
+
+$card-width: 300px;
+$card-height: auto;
+$card-image-height: 150px;
